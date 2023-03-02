@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 import uuid
 
+
 # Create your models here.
 
 class UserModel(AbstractUser):
@@ -10,6 +11,7 @@ class UserModel(AbstractUser):
     address = models.CharField(max_length=200)
     number_phone = models.CharField(max_length=15)
     USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = []
 
     class Meta:
         verbose_name = 'Пользователь'
